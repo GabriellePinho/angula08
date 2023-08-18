@@ -1,0 +1,15 @@
+<div class="container  d-flex justify-content-center mt-5 mb-5">
+    <div class="row ">
+        <div class="col-4" *ngFor="let foto of minhasFotos">
+            <div class="card mt-3 shadow" style="width: 18rem; background-color: #ecf0f1; border-radius: 10px;">
+                <!-- <img class="card-img-top" [src]="foto.url" alt="Imagem de capa do card"> -->
+                <!-- Usando o componente foto para fazer reponsividade nas imagens -->
+                <app-foto [imagem]="foto.url"></app-foto>
+                <div class="card-body">
+                <h5 class="card-title text-center">{{foto.titulo}}</h5>
+                <a href="#" class="btn btn-secondary btn-block shadow d-flex justify-content-center">Visitar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

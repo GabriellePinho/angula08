@@ -1,0 +1,30 @@
+<!--template Driven -é uma forma de trabalhar formulário Ferramentas: 
+     >ngForm -> Gera uma variável que guarda os dados do formulário
+     >ngModel->Informa para ngModel os campos do formulário 
+     >ngSubmit-> pega a caixinha (caixinha) e envia para o arquivo .ts do component
+-->
+<div class="container " style="margin-top: 150px;">
+    <h1 class="text-center"> Formulario para Cadastro</h1>
+
+<form #form="ngForm" (ngSubmit)="cadastro(form)">
+
+    <div class="form-group mt-3">
+        <label for="">Informe o endereço da Imagem: </label>
+        <input class="form-control" type="url" name="url" ngModel>
+    </div>    
+
+    <div class="form-group mt-3">
+        <label for="">Informe o titulo da Imagem: </label>
+        <input class="form-control" type="text" name="titulo" ngModel>
+    </div>
+    
+    <button class="btn btn-primary mt-3" type="submit" >{{ nameButton }}</button>
+
+</form>
+<hr>
+<p><strong>titulo: {{dados.titulo}}</strong></p>
+<!-- <p><strong>URL: {{dados.url}}</strong></p> 
+ -->
+    <img [src]="dados.url" alt="" style="WIDTH: 30%; height: 30%;">
+
+</div> s
